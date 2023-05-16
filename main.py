@@ -8,16 +8,30 @@
 
 # c = float(input("insert number - we multipy it on two: ")) # input is default string 
 # print(c *2)
-print("Fill info")
-myName = input ("Insert name ")
-age = int(input("Insert age "))
-hobby = input("Insert your hobby ")
-job = input("Insert your job ")
+# 
+# myName = "Mick"
+# print("Hello" + " " + myName)
+# print("Hello", " ", "world")
+# print(f"hello {myName}")
 
+# a = int(input("insert number "))
+# x1 = a%10
+# a = a//10
+# x2 = a%10
+# a = a//10
+# x3 = a%10
+# h = x1+x2+x3
+# print(x1)
+# print(x2)
+# print(x3)
+# print(h)
+# a= 3
+# b = 2
+# h = a/b*10
+# print(int(h))
+a = 9
+b = 7
+c = str(a)+str(b)
+c = int(c)
 
-print("User's Info: ")
-print("Name:" , myName )
-
-print("Age: ", age)
-print("Hobby: ", hobby )
-print("Job: ", job)
+print(c)
