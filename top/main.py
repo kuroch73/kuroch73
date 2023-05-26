@@ -148,21 +148,21 @@
 #         print("leap")
 # else:
 #     print("not leap")
-a = int(input("insert first number: "))
-b = int(input("insert second number: "))
-c = int(input("insert third number: "))
-if a + b > c and a + c > b and b + c > a:
-    print("Triangle exists")
+# a = int(input("insert first number: "))
+# b = int(input("insert second number: "))
+# c = int(input("insert third number: "))
+# if a + b > c and a + c > b and b + c > a:
+#     print("Triangle exists")
 
-    if a != b and b != c and a != c:
-        print("triangle diff sides")
+#     if a != b and b != c and a != c:
+#         print("triangle diff sides")
 
-    elif a == b or b == c or a == c:
-        print("triangle равносторонний")
-    else:
-        print("  равнобедренный")
-else:
-    print("треугольник не существует")
+#     elif a == b or b == c or a == c:
+#         print("triangle равносторонний")
+#     else:
+#         print("  равнобедренный")
+# else:
+#     print("треугольник не существует")
 
 # print("Выберите пол персонажа:\n", "ж-женский\n", "м-Мужской")
 # gender = str(input("Введите ж или м :\n"))
@@ -215,4 +215,66 @@ else:
 #         f"Класс:{role}\n"
 #         f"Имя:{name}\n")
 
- 
+# myName = "Denis"
+# start = int(input("Введите нач значение"))
+# end = int(input("Введите конч значение"))
+# k = 0
+# for i in range(start,end + 1):
+#     k = k + 1
+#     print(myName,i)
+# print(k)
+# for i in myName:
+#     print(i)
+#     if i == "m":
+#         break
+# else:
+#     print("NO 'm' in Denis")    
+# for i in range(0,29):
+#     if i % 2 != 0:
+#         print(i)
+# a = 2
+# b = 4
+# if a + b == 5:
+#  for i in range(0,10):
+#   print(i)
+# x = int(input("Insert number  "))
+# for i in range(2 , x):
+#     print(f"делим число {x} на {i}")
+#     print(f"остаток {x % i }")
+#     if  x % i == 0:
+#         print("number is complicated")
+#         break
+#     elif i == x:
+#         print("number is simple")
+# вывести каждое четное чсло кратное 6
+
+# x = 1
+# for x in range(2,100):
+#     if x % 6 == 0 and x % 2 == 0:
+#         print(x)
+
+# x = 2
+# for i in range(1,10):
+#     print(f"{x}  x {i} = {x * i}") 
+# 
+# i = 0
+# b = 10
+# while True:
+#     print(i)
+#     i = i + 1
+#     if i > 10:
+#         break
+# myName = "Denis"
+# print(len(myName))
+# i = 0
+# while i < len(myName):
+#     print(i)
+#     i += 1
+#n = 1
+x = int(input("insert number "))
+b = x
+for i in range(1,x):
+    x = x*i
+print(f"Факториал от  {b} = "  , x)
+    
+    
