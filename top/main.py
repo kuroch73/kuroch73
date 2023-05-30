@@ -270,11 +270,69 @@
 # while i < len(myName):
 #     print(i)
 #     i += 1
-#n = 1
-x = int(input("insert number "))
-b = x
-for i in range(1,x):
-    x = x*i
-print(f"Факториал от  {b} = "  , x)
-    
-    
+# n = 1
+# # x = int(input("insert number "))
+# b = x
+# for i in range(1,x):
+#     x = x*i
+# print(f"Факториал от  {b} = "  , x)
+# import time    
+# for h in range(1,10):
+#     for m  in range(1,10): # как часы, минуты, секунды и т.д.
+#         for s in range(1,10):
+#             print(f" ч {h}, м {m}, с {s}")   
+#             time.sleep(1/100)
+
+# h = 0
+# while h < 10:
+#     m = 0
+#     while m < 10:
+#         s = 0
+#         while s < 10:
+#             print(h,m,s)
+#             s += 1
+#         m += 1
+#     h += 1        
+# ------------------------------------------------------------------------
+
+print("Регистрация персонажа")
+reg = 0
+while reg < 1 :
+    reg_gender = 0
+    while reg_gender < 1:
+        gender = input("Выберите пол \n 1 - male \n 2 - female : ")
+        if gender == "1":
+            gender = "male"
+            reg_gender += 1
+        elif gender == "2":
+            gender = "Female"
+            reg_gender += 1
+        else:
+            print("Выберите из перечисленного")
+        if reg_gender == "1":
+            reg_race = 0
+            while reg_race < 1 :
+                race = input("Выберите расу \n 1 - человек \n 2- эльф : ")
+                if race == "1":
+                    race = "Человек"
+                    reg_race += 1
+                elif race == "2":
+                    race = "Эльф"
+                elif race == "0":
+                    reg_gender = 0
+                    reg_race += 1
+
+                    break
+                else:
+                    print("Выберите из перечисленного")
+                if reg_race == 1 :
+                    reg_role = 0
+                    if race == "Человек":
+                        while reg_role == 0:
+                            role = input("")
+                    elif race == "Эльф":
+                        
+
+    reg += 1
+
+ 
