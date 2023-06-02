@@ -300,7 +300,7 @@ reg = 0
 while reg < 1 :
     reg_gender = 0
     while reg_gender < 1:
-        gender = input("Выберите пол \n 1 - male \n 2 - female : ")
+        gender = input("Выберите пол \n 1 - male \n 2 - female \n : ")
         if gender == "1":
             gender = "male"
             reg_gender += 1
@@ -309,29 +309,31 @@ while reg < 1 :
             reg_gender += 1
         else:
             print("Выберите из перечисленного")
-        if reg_gender == "1":
+        if reg_gender == 1:
             reg_race = 0
             while reg_race < 1 :
-                race = input("Выберите расу \n 1 - человек \n 2- эльф : ")
+                race = input("0 назад Выберите race  \n 1 - человек \n 2- эльф \n: ")
                 if race == "1":
                     race = "Человек"
                     reg_race += 1
                 elif race == "2":
                     race = "Эльф"
+                    reg_race += 1
                 elif race == "0":
                     reg_gender = 0
-                    reg_race += 1
-
+                    #reg_race += 1
                     break
+                    
                 else:
                     print("Выберите из перечисленного")
-                if reg_race == 1 :
+                if reg_race == 1:
                     reg_role = 0
                     if race == "Человек":
                         while reg_role == 0:
-                            role = input("")
+                            role = input("0<-назад Выберете рассу пресонажа\n1-Воин\n2-Лучник\n: ")
+                            if role == "1":
+                                reg_role == 1
                     elif race == "Эльф":
-                        
 
     reg += 1
 
