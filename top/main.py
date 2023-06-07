@@ -437,7 +437,7 @@
 #     sum = int(input("введите число "))
 #     result = True
 
-list = []
+
 # while len(list) < 5:
 #     i = 0
 #     input("введите имя ", i)
@@ -449,20 +449,43 @@ list = []
     # if i > 5 and i < 10:
     #     if  i == "Денис":
     #        print("Не приглашать")
-reg = False
-while reg == False:
-    print("1 - добавить, 2 - удалить, 3 - просмотр")
+# reg = False
+# list = []
+# while reg == False:
+#     print("1 - добавить, 2 - удалить, 3 - просмотр ")
+#     choice = int(input("введите действие "))
+#     if choice == 1:
+#         guest = input("введите имя гостя ")
+#         list.append(guest)
+#        print(list)
+#     elif choice == 2:
+#         guest = input("введите имя гостя ")
+#         list.remove(guest)
+#     elif choice == 3:
+#         #guest = input("введите имя гостя ")
+#         print(list)
+#     else:
+#         print("Ошибка ввода ")
+# reg = True
+    
+list = []
+blacklist = []
+for i in range (0 , 3):
+    print("1 - добавить, 2 - удалить, 3 - просмотр ")
     choice = int(input("введите действие "))
     if choice == 1:
-        guest = input("введите имя гостя")
+        guest = input("введите имя гостя ")
         list.append(guest)
-    elif choice == 2:
-        guest = input("введите имя гостя")
+            #print(list)
+    elif choice == 2 :
+        guest = input("введите имя гостя ")
         list.remove(guest)
-    elif choice == 3:
-        guest = input("введите имя гостя")
+    elif choice == 3 :
         print(list)
-reg = True
-    
-    
-
+    elif len(list) < 5:
+        print(" Пригласите еще гостей ")
+    elif guest == "Denis":
+        guest = input("введите имя гостя ")
+        blacklist.append(guest)
+print(blacklist)
+print(list, len(list))
