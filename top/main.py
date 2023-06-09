@@ -468,24 +468,93 @@
 #         print("Ошибка ввода ")
 # reg = True
     
-list = []
-blacklist = []
-for i in range (0 , 3):
-    print("1 - добавить, 2 - удалить, 3 - просмотр ")
-    choice = int(input("введите действие "))
-    if choice == 1:
-        guest = input("введите имя гостя ")
-        list.append(guest)
-            #print(list)
-    elif choice == 2 :
-        guest = input("введите имя гостя ")
-        list.remove(guest)
-    elif choice == 3 :
-        print(list)
-    elif len(list) < 5:
-        print(" Пригласите еще гостей ")
-    elif guest == "Denis":
-        guest = input("введите имя гостя ")
-        blacklist.append(guest)
-print(blacklist)
-print(list, len(list))
+# list = []
+# blacklist = []
+# for i in range (0 , 3):
+#     print("1 - добавить, 2 - удалить, 3 - просмотр ")
+#     choice = int(input("введите действие "))
+#     if choice == 1:
+#         guest = input("введите имя гостя ")
+#         list.append(guest)
+#             #print(list)
+#     elif choice == 2 :
+#         guest = input("введите имя гостя ")
+#         list.remove(guest)
+#     elif choice == 3 :
+#         print(list)
+#     elif len(list) < 5:
+#         print(" Пригласите еще гостей ")
+#     elif guest == "Denis":
+#         guest = input("введите имя гостя ")
+#         blacklist.append(guest)
+# print(blacklist)
+# print(list, len(list))
+
+# productList = ["Каша", "Вода"]
+# print(productList[0])
+# infoProduct = {
+#     "nameProduct" : "Каша",
+#     "price" : 120,
+#     "sale" : "20%",
+# }
+# print(f"{infoProduct['price'] }\n { infoProduct['sale']}")
+
+# myName = input("введите имя ")
+# myAge = int(input("скольво вам лет "))
+# infoPerson = {
+#     "namePerson" : myName,
+#     "agePerson" : myAge
+# }
+# print(infoPerson)
+
+# for key in infoPerson:
+#     print(f"Имя  - {infoPerson[key]}")
+     
+# productList = [
+#     {
+#         "nameProduct" : "Хлеб",
+#         "price" : 55,
+#         "count" : 37,
+#         "category" : "Хлеб"
+#     },
+#     {   "nameProduct" : "Молоко",
+#         "price" : 101,
+#         "count" : 20,
+#         "category" : "молочная"
+
+#     },
+#     {
+#         "nameProduct" : "Кефир",
+#         "price" : 10,
+#         "count" : 25,
+#         "category" : "молочная"
+#     }
+# ]
+# for i in range (0, len(productList)):
+#     if productList[i]["category"] == "молочная":
+#         productList[i]["price"] = productList[i]["price"] * 2
+#         print(f"название товара - {productList[i]['nameProduct']}")
+#         print(f" цена - {productList[i]['price']}")
+#         print(f"Кол-во товара - {productList[i]['count']}")
+#         print("-----------------------------------------")
+
+guestList = []
+while True:
+    nameGuest = input("Введите имя гостя ")
+    ageGuest = int(input("введите возраст "))
+    # эти переменные будут добавляться в объект infoGuest
+    # и втавляться в соответв ключи
+    # infoGuest  хранит данные гостя
+    infoGuest = {
+        "nameGuest" : nameGuest,
+        "ageGuest" : ageGuest
+    }
+    #print(infoGuest)
+    guestList.append(infoGuest)
+    if len(guestList) > 3:
+        break
+print(guestList)
+for i in range (0 , len(guestList)):
+    print(f"Имя гостя - {guestList[i]['nameGuest']}")
+    print(f"Возраст гостя - {guestList[i]['Guest']}")
+    print('-------------------------')
