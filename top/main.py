@@ -419,24 +419,69 @@
 #         print("--------------------------")
 
 
-guestList = []
-while True:
-    nameGuest = input("Введите имя гостя : ")
-    ageGuest = int(input("Введите возраст гостя: "))
-    # выше созданные переменные будут добавляться в объект infoGuest
-    # и вставляться в соответствующие ключи
-    # infoGuest - хранит данные гостя
-    infoGuest = {
-        "nameGuest" : nameGuest,
-        "ageGuest" : ageGuest,
-    }
-    # print(infoGuest)
-    guestList.append(infoGuest)
-    if len(guestList) > 3:
-        break
+# guestList = []
+# while True:
+#     nameGuest = input("Введите имя гостя : ")
+#     ageGuest = int(input("Введите возраст гостя: "))
+#     # выше созданные переменные будут добавляться в объект infoGuest
+#     # и вставляться в соответствующие ключи
+#     # infoGuest - хранит данные гостя
+#     infoGuest = {
+#         "nameGuest" : nameGuest,
+#         "ageGuest" : ageGuest,
+#     }
+#     # print(infoGuest)
+#     guestList.append(infoGuest)
+#     if len(guestList) > 3:
+#         break
 
-for i in range (0,len(guestList)):
-    print(f"Имя гостя - {guestList[i]['nameGuest']}")
-    print(f"Возраст гостя - {guestList[i]['ageGuest']}")
-    print("------------------")
+# for i in range (0,len(guestList)):
+#     print(f"Имя гостя - {guestList[i]['nameGuest']}")
+#     print(f"Возраст гостя - {guestList[i]['ageGuest']}")
+#     print("------------------")
 
+ 
+# def reg(x):
+    
+#     print(x)
+# reg(input("введите све имя "))
+# 
+def regName(myName):
+    print(myName)
+    globalReg()
+def regGender():
+    listGender = ["муж" , "жен"]
+    textGender = ""
+    for i in range(0, len(listGender)):
+        textGender += f"{i} - {listGender[i]}\n"
+    myGender = int(input(f"{textGender}"))
+    for i in range(0, len(listGender)):   
+        if myGender == i:
+            myGender = listGender[i]
+            break 
+    print(myGender)
+    globalReg()
+    #print(textGender)
+def globalReg():
+    print("регистрация персонажа ")
+    x = int(input("выбор лейстаия : \n 1 - ВВод имени \n 2- Выбор Гендера 3- Выбор расы "))
+    if x == 1:
+        regName(input("Имя : "))
+    elif x == 2:
+        regGender()
+    elif x == 3:
+        regRace()
+
+ 
+def regRace():
+    listRace = ["человек" , "эльф" , "гном"]
+    textRace = ""
+    for i in range(0, len(listRace)):
+        textRace += f"{i} - {listRace[i]}\n"
+    myRace = int(input(f"{textRace}"))
+    for i in range(0, len(listRace)):   
+        if myRace == i:
+            myRace = listRace[i]
+            break
+    globalReg() 
+globalReg()

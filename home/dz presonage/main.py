@@ -45,25 +45,25 @@ while reg == False:
             if  myRace == len(raceList):
                 reg_gender = False
                 #break
-                if reg_race == True:
-                    reg_role = False
-                while reg_role == False :
-                    myRole = int(input(f"0 назад Выберите роль :\n  {textRole}"))
-                    if myRole > len(roleList) or myRole < 0 :
-                        print("Ошибка: выберите из перечисленного ")
-                    elif myRole == len(roleList):
-                        reg_race = False
-                        break
+#                 if reg_race == True:
+#                     reg_role = False
+#                 while reg_role == False :
+#                     myRole = int(input(f"0 назад Выберите роль :\n  {textRole}"))
+#                     if myRole > len(roleList) or myRole < 0 :
+#                         print("Ошибка: выберите из перечисленного ")
+#                     elif myRole == len(roleList):
+#                         reg_race = False
+#                         break
                         
-                    else:
-                        for i in range (0 , len(roleList)):
-                            if myRole == i:
-                                role = roleList[i]
-                                reg_role = True
-                                print("Вы выбрали  ", role)
-                                break
-                if  myRole == len(roleList):
-                    reg_race = False
-                    break
-reg = True
+#                     else:
+#                         for i in range (0 , len(roleList)):
+#                             if myRole == i:
+#                                 role = roleList[i]
+#                                 reg_role = True
+#                                 print("Вы выбрали  ", role)
+#                                 break
+#                 if  myRole == len(roleList):
+#                     reg_race = False
+#                     break
+# reg = True
                     
