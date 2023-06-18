@@ -59,21 +59,56 @@
 #         print(f" предмет {objectList[i]['object']}") # печать предметов по дням в цикле
 
 
-
-name = input("введите имя ")
-surname = input("Введите фамилию ")
-login = input("введите логин ")
-password = input("введите пароль ")
+userList = []
 while True :
-    userList = []
-    massive = {
-            "name" : name,
-            "surname" : surname,
-            "login" : login,
-            "password" : password
-    }
-    userList.append(massive)
-     
-        
-        #print(userList)
+    choice1 = input("Выберите действие \n 1 - Регстрация \n 2 - Вход \n ")
+    if choice1 == "1":
+        name = input("введите имя ")
+        surname = input("Введите фамилию ")
+        login = input("введите логин ")
+        password = input("введите пароль ")
+
+    
+        massive = {
+                "name" : name,
+                "surname" : surname,
+                "login" : login,
+                "password" : password
+        }
+        userList.append(massive)
+        if login not in userList:
+            print(" Вы зарегистрированы ")
+        else:
+            print("Такой login уже используется ")
+            break
+    elif choice1 == "2":
+        print("Вход ")
+        login = input("Введите логин ")
+        password = input("Введите пароль ")
+        for i in range(0 , len(userList)):
+            if login in userList[i]["login"] and password in userList[i]["password"]:
+                print("Вход выполнен ")
+            else:
+                print("Неверный логин или пароль ")
+                break
+        choice2 = input("Выберите действие \n 1 - просмотр информации \n 2- Выход 3- Редактирование профиля ")
+        if choice2 == "1":
+            print(f"Имя - {userList[i]['name']}")
+            print(f"Фамилия - {userList[i]['surname']}")
+            print(f"логин - {userList[i]['login']}")
+        elif choice2 == "2":
+            break
+        elif choice2 == "3":
+            print("Редактирование данных ")
+            login_new = input("Введите логин ")
+            password_new = input("Введите пароль ")
+            if userList[i]["login"] == login and userList[i]["password"] == password:
+                userList[i]["login"] = login_new
+                userList[i]["password"] = password_new
+                print("Данные сохранены ")
+        else:
+            print(" ~ ")
+    
+    else:
+        print("Ошибка ")
     
