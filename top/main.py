@@ -446,42 +446,89 @@
 #     print(x)
 # reg(input("введите све имя "))
 # 
-def regName(myName):
-    print(myName)
-    globalReg()
-def regGender():
-    listGender = ["муж" , "жен"]
-    textGender = ""
-    for i in range(0, len(listGender)):
-        textGender += f"{i} - {listGender[i]}\n"
-    myGender = int(input(f"{textGender}"))
-    for i in range(0, len(listGender)):   
-        if myGender == i:
-            myGender = listGender[i]
-            break 
-    print(myGender)
-    globalReg()
-    #print(textGender)
-def globalReg():
-    print("регистрация персонажа ")
-    x = int(input("выбор лейстаия : \n 1 - ВВод имени \n 2- Выбор Гендера 3- Выбор расы "))
-    if x == 1:
-        regName(input("Имя : "))
-    elif x == 2:
-        regGender()
-    elif x == 3:
-        regRace()
+# def regName(myName):
+#     print(myName)
+#     globalReg()
+# def regGender():
+#     listGender = ["муж" , "жен"]
+#     textGender = ""
+#     for i in range(0, len(listGender)):
+#         textGender += f"{i} - {listGender[i]}\n"
+#     myGender = int(input(f"{textGender}"))
+#     for i in range(0, len(listGender)):   
+#         if myGender == i:
+#             myGender = listGender[i]
+#             break 
+#     print(myGender)
+#     globalReg()
+#     #print(textGender)
+# def globalReg():
+#     print("регистрация персонажа ")
+#     x = int(input("выбор лейстаия : \n 1 - ВВод имени \n 2- Выбор Гендера 3- Выбор расы "))
+#     if x == 1:
+#         regName(input("Имя : "))
+#     elif x == 2:
+#         regGender()
+#     elif x == 3:
+#         regRace()
 
  
-def regRace():
-    listRace = ["человек" , "эльф" , "гном"]
-    textRace = ""
-    for i in range(0, len(listRace)):
-        textRace += f"{i} - {listRace[i]}\n"
-    myRace = int(input(f"{textRace}"))
-    for i in range(0, len(listRace)):   
-        if myRace == i:
-            myRace = listRace[i]
-            break
-    globalReg() 
-globalReg()
+# def regRace():
+#     listRace = ["человек" , "эльф" , "гном"]
+#     textRace = ""
+#     for i in range(0, len(listRace)):
+#         textRace += f"{i} - {listRace[i]}\n"
+#     myRace = int(input(f"{textRace}"))
+#     for i in range(0, len(listRace)):   
+#         if myRace == i:
+#             myRace = listRace[i]
+#             break
+#     globalReg() 
+# globalReg()
+ 
+# def f1(a):
+#     c = a - 50
+#     print(c)
+#     return c
+# print(f1(100))
+
+# myInfo = {
+
+# }
+
+# def regName(massiv, newName):
+#     massiv["myName"] = newName
+#     return massiv
+# def regGender(massiv):  
+#     x = int(input("1 - м \n2 - ж \n"))
+#     if x == 1 :
+#         massiv["myGender"] = "м"
+#     elif x == 2:
+#         massiv["myGender"] = "ж"
+#     return massiv
+# def globalReg(massiv):
+#     regName(massiv,input("Ваше имя "))
+#     regGender(massiv)
+#     #print(massiv)
+#     return massiv
+
+# newInfo = globalReg(myInfo)
+# print(newInfo)
+
+a = 4
+b = 2
+c = 3
+def regSum(a,b,c):
+    x = int(input("1 - сумма \n2 - произведение \n"))
+    if x == 1:
+        sum = a + b + c 
+    elif x == 2 :
+        sum = a * b * c
+    return sum
+func = regSum(a,b,c)
+print(func)
+# def sum(a,b,c):
+#     x = a+b+c
+#     return x
+# print(sum(1,2,3))
+    
