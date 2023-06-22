@@ -492,43 +492,42 @@
 #     return c
 # print(f1(100))
 
-# myInfo = {
+myInfo = {
 
-# }
+ }
+print(myInfo)
+def regName(massiv, newName):
+    print("в функцию пришло значение :", massiv)
+    massiv["myName"] = newName
+    print("Из функции отправили ", massiv)
+    return massiv
+def regGender(massiv):  
+    print("в функцию пришло значение: ", massiv)
+    x = int(input("1 - м \n2 - ж \n"))
+    if x == 1 :
+        massiv["myGender"] = "м"
+    elif x == 2:
+        massiv["myGender"] = "ж"
+    print("Из функции отправили : ", massiv)
+    return massiv
+def globalReg(massiv):
+    regName(massiv,input("Ваше имя "))
+    regGender(massiv)
+    #print(massiv)
+    return massiv
 
-# def regName(massiv, newName):
-#     massiv["myName"] = newName
-#     return massiv
-# def regGender(massiv):  
-#     x = int(input("1 - м \n2 - ж \n"))
-#     if x == 1 :
-#         massiv["myGender"] = "м"
-#     elif x == 2:
-#         massiv["myGender"] = "ж"
-#     return massiv
-# def globalReg(massiv):
-#     regName(massiv,input("Ваше имя "))
-#     regGender(massiv)
-#     #print(massiv)
-#     return massiv
+newInfo = globalReg(myInfo)
+print(newInfo)
 
-# newInfo = globalReg(myInfo)
-# print(newInfo)
-
-a = 4
-b = 2
-c = 3
-def regSum(a,b,c):
-    x = int(input("1 - сумма \n2 - произведение \n"))
-    if x == 1:
-        sum = a + b + c 
-    elif x == 2 :
-        sum = a * b * c
-    return sum
-func = regSum(a,b,c)
-print(func)
-# def sum(a,b,c):
-#     x = a+b+c
-#     return x
-# print(sum(1,2,3))
-    
+# a = 4
+# b = 2
+# c = 3
+# def regSum(a,b,c):
+#     x = int(input("1 - сумма \n2 - произведение \n"))
+#     if x == 1:
+#         sum = a + b + c 
+#     elif x == 2 :
+#         sum = a * b * c
+#     return sum
+# func = regSum(a,b,c)
+# print(func)
