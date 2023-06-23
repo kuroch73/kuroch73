@@ -492,32 +492,32 @@
 #     return c
 # print(f1(100))
 
-myInfo = {
+# myInfo = {
 
- }
-print(myInfo)
-def regName(massiv, newName):
-    print("в функцию пришло значение :", massiv)
-    massiv["myName"] = newName
-    print("Из функции отправили ", massiv)
-    return massiv
-def regGender(massiv):  
-    print("в функцию пришло значение: ", massiv)
-    x = int(input("1 - м \n2 - ж \n"))
-    if x == 1 :
-        massiv["myGender"] = "м"
-    elif x == 2:
-        massiv["myGender"] = "ж"
-    print("Из функции отправили : ", massiv)
-    return massiv
-def globalReg(massiv):
-    regName(massiv,input("Ваше имя "))
-    regGender(massiv)
-    #print(massiv)
-    return massiv
+#  }
+# print(myInfo)
+# def regName(massiv, newName):
+#     print("в функцию пришло значение :", massiv)
+#     massiv["myName"] = newName
+#     print("Из функции отправили ", massiv)
+#     return massiv
+# def regGender(massiv):  
+#     print("в функцию пришло значение: ", massiv)
+#     x = int(input("1 - м \n2 - ж \n"))
+#     if x == 1 :
+#         massiv["myGender"] = "м"
+#     elif x == 2:
+#         massiv["myGender"] = "ж"
+#     print("Из функции отправили : ", massiv)
+#     return massiv
+# def globalReg(massiv):
+#     regName(massiv,input("Ваше имя "))
+#     regGender(massiv)
+#     #print(massiv)
+#     return massiv
 
-newInfo = globalReg(myInfo)
-print(newInfo)
+# newInfo = globalReg(myInfo)
+# print(newInfo)
 
 # a = 4
 # b = 2
@@ -531,3 +531,16 @@ print(newInfo)
 #     return sum
 # func = regSum(a,b,c)
 # print(func)
+
+def menu(massiv):
+    print(massiv)
+
+def newMenu(massiv):
+    for i in range(0,len(massiv)):
+        print(massiv[i]["name"])
+
+    listMenu = [
+        "nameFunc" : "Функция вызова меню",
+        "startFunc" : menu(massiv)
+    ]
+listMenu[0]["startFunc"]
