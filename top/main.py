@@ -532,15 +532,15 @@
 # func = regSum(a,b,c)
 # print(func)
 
-def menu(massiv):
-    print(massiv)
+# def menu(massiv):
+#     print(massiv)
 
-def newMenu(massiv):
-    for i in range(0,len(massiv)):
-        print(massiv[i]["name"])
+# def newMenu(massiv):
+#     for i in range(0,len(massiv)):
+#         print(massiv[i]["name"])
 
-    listMenu = [
-        "nameFunc" : "Функция вызова меню",
-        "startFunc" : menu(massiv)
-    ]
-listMenu[0]["startFunc"]
+#     listMenu = [
+#         "nameFunc" : "Функция вызова меню",
+#         "startFunc" : menu(massiv)
+#     ]
+# listMenu[0]["startFunc"]
