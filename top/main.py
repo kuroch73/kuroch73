@@ -531,16 +531,42 @@
 #     return sum
 # func = regSum(a,b,c)
 # print(func)
+listMenu = []
+def menu(massiv):
+    print(massiv)
 
-# def menu(massiv):
-#     print(massiv)
+def newMenu(massiv):
+    for i in range(0,len(massiv)):
+        print(massiv[i]["name"])
+def x(massiv):
 
-# def newMenu(massiv):
-#     for i in range(0,len(massiv)):
-#         print(massiv[i]["name"])
+    listMenu = [
+        {
+        "nameFunc" : "Функция нового пользователя",
+        "startFunc" : menu
+        },
+        {
+        "nameFunc" : "Вход в ЛК",
+        "startFunc" : newMenu
+        }
+    ]
+text = ""
+for i in range(0,len(listMenu)):
+    text += f'{i} - {listMenu[i]["nameFunc"]}\n'
+print(text)
+m = int(input("Введите "))
+for i in range(0,len(listMenu)):
+    if m == i :
+        listMenu[i]["startFunc"](massiv)
+    x(massiv)
 
-#     listMenu = [
-#         "nameFunc" : "Функция вызова меню",
-#         "startFunc" : menu(massiv)
-#     ]
-# listMenu[0]["startFunc"]
+    arrMass = [
+        {
+            "name" : "Макс"
+        },
+        {
+            "name" : "Денис"
+        },
+    ]
+
+    x(arrMass)
