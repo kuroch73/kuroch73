@@ -250,7 +250,7 @@ base_list = [
 ]
 registered_users = []
 class User():
-    def __init__(self,user_id, first_name,last_name,birthday,gender,login,password ) -> None:
+    def __init__(self,user_id, first_name,last_name,birthday,gender,login,password ) :
         self.user_id = user_id
         self.first_name = first_name
         self.last_name = last_name
@@ -262,15 +262,16 @@ class User():
         # ------------------------------
         self.status = "user"
         self.blocking = False
-    def up_date(self,new_first_name): # update подразумевает изменения какой либо информации
+    def update_first_name(self,new_first_name): # update подразумевает изменения какой либо информации
         self.first_name = new_first_name
-    def up_date(self,new_last_name):
+        print(f"новое имя : {self.first_name}")
+    def update_last_name(self,new_last_name):
         self.last_name = new_last_name
-    def up_date(self,new_bithday):
+    def update_birthday(self,new_bithday):
         self.birthday = new_bithday
-    def up_date(self,new_gender):
+    def update_ner_gender(self,new_gender):
         self.gender = new_gender
-    def up_date(self,new_password):
+    def update_new_password(self,new_password):
         if self.password == input("Веведите старый пароль  "):
             self.password = new_password
 
@@ -316,16 +317,73 @@ class Admin(Moderator):
         user_list.clear()
         print("База данных удалена")
     def create_user_list(self,massiv, user_list): # list просто массив данных
-        for i in range(0,len(massiv)):
+        for i in range(len(user_list),len(massiv)): 
+            print(len(user_list))
             user_list.append(User(
-                user_id=i,
+                user_id=i+1,
                 first_name = massiv[i]['first_name'],
                 last_name=massiv[i]['last_name'],
                 birthday=massiv[i]['birthday'],
                 gender=massiv[i]['gender'],
                 login=massiv[i]['login'],
                 password=massiv[i]['password']))
-myAdmin = Admin(10,"admin","admin","01.01.1970","male","admin","admin")
-myAdmin.create_user_list(base_list,registered_users)
-myAdmin.blocking_user(registered_users)
+            
+class Registration():
+    def __init__(self):
+        pass
+    def create_user(self,user_list):
+        user_list.append(User(len(user_list),input("введите имя"),
+                                     input("введите фамилию"),
+                                     input("введите дату рождения"),
+                                     input("введите пол"),
+                                     input("придумайте логин"),
+                                     input("введите пароль")))
+class InLog():
+    def __init__(self,login,password) :
+        self.login = login
+        self.password = password
+    def log_in_account(self,users_list):
+
+        for i in range(len(users_list)):
+            if users_list[i].login == self.login and users_list[i].password == self.password:
+                print("вход выполнен ")
+                break
+            elif i == len(users_list):
+                print("ошибка")
+class Manager():
+    def __init__(self,reg,inlog,userModerAdmin,dataList):
+        self.reg = reg
+        self.inlog = inlog
+        self.userModerAdmin = userModerAdmin
+        self.dataList = dataList
+    def work(self):
+        print(self)
+
+my_Reg = Registration
+my_inLog = InLog
+my_person_list = [User,Moderator,Admin]
+my_base = []
+#my_person_list[0](10,"admin","admin","01.01.1970","male","admin","admin")
+myManager = Manager(my_Reg,my_inLog,my_person_list,my_base)
+myManager.userModerAdmin[0](10,"admin","admin","01.01.1970","male","admin","admin")
+myManager.inlog("admin","admin")
+# class Manager(Registration,InLog ):
+#     def __init__(self):
+#         super().__init__()
+
+# proverka = Registration()
+# proverka.create_user()
+
+# myAdmin = Admin(10,"admin","admin","01.01.1970","male","admin","admin")
+# myAdmin.create_user_list(base_list,registered_users)
+#myAdmin.blocking_user(registered_users)
 #print(registered_users)
+# registered_users[0].update_first_name("Денис")
+# print(registered_users[0].first_name)
+
+myLogin = InLog(input("введите логин : "),input("введите пароль :"))
+myLogin.log_in_account()
+# primer = [
+#     User (0, "name", "01.06.2001","мужской", "login","pass"),
+#     User (0, "name", "01.06.2001","мужской", "login","pass")
+# ]
