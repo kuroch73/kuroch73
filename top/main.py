@@ -531,42 +531,56 @@
 #     return sum
 # func = regSum(a,b,c)
 # print(func)
-listMenu = []
-def menu(massiv):
-    print(massiv)
+# listMenu = []
+# def menu(massiv):
+#     print(massiv)
 
-def newMenu(massiv):
-    for i in range(0,len(massiv)):
-        print(massiv[i]["name"])
-def x(massiv):
+# def newMenu(massiv):
+#     for i in range(0,len(massiv)):
+#         print(massiv[i]["name"])
+# def x(massiv):
 
-    listMenu = [
-        {
-        "nameFunc" : "Функция нового пользователя",
-        "startFunc" : menu
-        },
-        {
-        "nameFunc" : "Вход в ЛК",
-        "startFunc" : newMenu
-        }
-    ]
-text = ""
-for i in range(0,len(listMenu)):
-    text += f'{i} - {listMenu[i]["nameFunc"]}\n'
-print(text)
-m = int(input("Введите "))
-for i in range(0,len(listMenu)):
-    if m == i :
-        listMenu[i]["startFunc"](massiv)
-    x(massiv)
+#     listMenu = [
+#         {
+#         "nameFunc" : "Функция нового пользователя",
+#         "startFunc" : menu
+#         },
+#         {
+#         "nameFunc" : "Вход в ЛК",
+#         "startFunc" : newMenu
+#         }
+#     ]
+# text = ""
+# for i in range(0,len(listMenu)):
+#     text += f'{i} - {listMenu[i]["nameFunc"]}\n'
+# print(text)
+# m = int(input("Введите "))
+# for i in range(0,len(listMenu)):
+#     if m == i :
+#         listMenu[i]["startFunc"](massiv)
+#     x(massiv)
 
-    arrMass = [
-        {
-            "name" : "Макс"
-        },
-        {
-            "name" : "Денис"
-        },
-    ]
+#     arrMass = [
+#         {
+#             "name" : "Макс"
+#         },
+#         {
+#             "name" : "Денис"
+#         },
+#     ]
 
-    x(arrMass)
+#     x(arrMass)
+
+    # base_list данных как SQL не может хранить кслассы,фунцкии и т.п
+
+registered_users = [] # обработанная база данных с сервера,хранит весь функционал пользователей,модераторов и админа
+
+file = open("text.txt","r")            
+print(file.read())
+
+#fileW = open(text.txt)
+import json
+primer = '[{"first_name" : "Denis","age" : 22}, {"first_name" : "Masha","age" : 18}]'
+
+massiv = json.loads(primer)
+print(massiv)
