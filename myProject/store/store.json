@@ -1,0 +1,42 @@
+[
+    {
+        "first_name": "Denis",
+        "last_name": "Kirillov",
+        "birthday": "01.06.2001",
+        "gender": "Male",
+        "login": "denis161",
+        "password": "12345"
+    },
+    {
+        "first_name": "Maxim",
+        "last_name": "Maximovich",
+        "birthday": "11.04.2000",
+        "gender": "Male",
+        "login": "maks07",
+        "password": "12345"
+    },
+    {
+        "first_name": "ruslan",
+        "last_name": "Ruslanov",
+        "birthday": "11.02.2000",
+        "gender": "Male",
+        "login": "russlan",
+        "password": "12345"
+    },
+    {
+        "first_name": "Kate",
+        "last_name": "Isaeva",
+        "birthday": "25.10.200",
+        "gender": "Female",
+        "login": "ekaterina25",
+        "password": "12345"
+    },
+    {
+        "first_name": "Olga",
+        "last_name": "kulakova",
+        "birthday": "23.09.1979",
+        "gender": "Female",
+        "login": "kulak",
+        "password": "12345"
+    }
+]
