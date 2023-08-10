@@ -78,3 +78,76 @@
 // let z = +prompt("3-число")
 // console.log(Math.max(x,y,z))
 
+let plus = document.querySelector("#plus");
+let minus = document.querySelector("#minus");
+let out = document.getElementById("out")
+console.log(plus)
+console.log(minus)
+console.log(out)
+
+// let head = document.querySelector('head')
+// console.log(head)
+
+let h1 = document.querySelector("h1")
+h1.innerHTML = "УРОК4"
+
+let title = document.querySelector("title")
+title.innerHTML = "урок" + 5
+
+let i = 0;
+function plusOut(){
+    i++;
+    out.innerHTML = i;
+
+}
+function minusOut(){
+    i--;
+    out.innerHTML = i;
+
+}
+plusOut()
+plusOut()
+minusOut()
+
+// out.innerHTML = 123;
+plus.addEventListener("click", plusOut)
+minus.addEventListener("click", minusOut)
+
+let number1 = document.querySelector("#number1");
+let number2 = document.querySelector("#number2");
+
+let calcPlus = document.querySelector("#calcPlus");
+let calcMinus = document.querySelector("#calcMinus");
+let calcMul = document.querySelector("#calcMul");
+let calcDiv = document.querySelector("#calcDiv");
+
+let otvet = document.querySelector("#otvet");
+
+function fPlus() {
+    
+    otvet.innerHTML = Number(number1.value) + Number(number2.value)
+}
+
+function mMul() {
+    // number1 = number(number1)
+    // number2 = number(number2)
+    otvet.innerHTML = number1.value * number2.value
+}
+function dDiv() {
+    // number1 = number(number1)
+    // number2 = number(number2)
+    otvet.innerHTML = number1.value / number2.value
+}
+function sMin() {
+    // number1 = number(number1)
+    // number2 = number(number2)
+    otvet.innerHTML = number1.value - number2.value
+}
+
+calcPlus.addEventListener("click", fPlus)
+calcMul.addEventListener("click", mMul)
+calcDiv.addEventListener("click", dDiv)
+calcMinus.addEventListener("click", sMin)
+
+let body = document.body;
+// body.style.backgroundColor = "red"

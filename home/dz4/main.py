@@ -20,16 +20,16 @@
 #         sum += 1
 # print("количество чисел кратных 5: " , sum)
 # 3.
-a = int(input("Start interval: "))
-b = int(input("End interval: "))
-for i in range(a, b+1):
-    if i % 3 == 0 and i % 5 == 0:
-        print("Fizz Buzz")
-    elif i % 3 == 0:
-        print("Fizz")
-    elif i % 5 == 0:
-        print("Buzz")
-    elif i % 3 != 0 and i % 5 != 0:
-        print(i)
-    else:
-        None
+# a = int(input("Start interval: "))
+# b = int(input("End interval: "))
+# for i in range(a, b+1):
+#     if i % 3 == 0 and i % 5 == 0:
+#         print("Fizz Buzz")
+#     elif i % 3 == 0:
+#         print("Fizz")
+#     elif i % 5 == 0:
+#         print("Buzz")
+#     elif i % 3 != 0 and i % 5 != 0:
+#         print(i)
+#     else:
+#         None
