@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница </title>
+</head>
+<body>
+<h1>Добро пожаловать ! <br> генератор паролей </h1>
+<form action="{% url 'password' %}">
+    <span> Количество символов </span>
+    <select name="lenght">
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <br>
+    <label> Заглавные буквы </label>
+    <input type="checkbox" name="upper">
+    <br>
+    <br>
+    <button type="submit"> Сгенерировать новый пароль </button>
+
+</form>
+</body>
+</html>
