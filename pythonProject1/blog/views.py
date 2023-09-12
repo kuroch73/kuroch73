@@ -4,6 +4,7 @@ from .models import Article # подключение базы данных
 app_name = 'blog'
 def blogView(request):
     articles = Article.objects.all() # отвечает за хранение подключенной базы
+
     return render(request, template_name='blog/blog.html', context={'articles': articles})
 
 def detail(request, article_id):
