@@ -1,10 +1,35 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Блог</title>
+    <link rel="stylesheet" href="={% static 'home/style/style.css' %}">
 </head>
 <body>
+<header class ="header">
+<nav>
+    <a href="#" class="link"> Главная</a>
+    <a href="#" class="link"> Блог </a>
+    <a href="#" class="link"> Портфолио</a>
+</nav>
+   <div class="header-right">
+       <a href="#">Регистрация</a>
+       <a href="#">Вход</a>
+   </div>
+</header>
+<main>
+    <section class="hero">
+        <img src="" alt="" class="my_image">
+        <span class="first_name">Текст рыба </span>
+        <span class="last_name">Текст рыба </span>
+        <span class="my_age">99 </span>
+    </section>
 
+    <section class="hero">
+        <h2>регистрация нового пользователя </h2>
+        <a href="#" class ="sign_link"> Регистрация </a>
+    </section>
+</main>
 </body>
 </html>
