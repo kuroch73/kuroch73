@@ -16,16 +16,33 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+<<<<<<< HEAD
 
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 
 import blog.views
+=======
+from django.urls import path, include
+from django.urls import path
+from django.conf.urls.static import static # импортировали из настроек статику
+from django.conf import settings # импортировали из настроек свои записи
+
+import home.views
+>>>>>>> aa63bd7a62534e62ac69d41229e1af6264db648c
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/', blog.views.blogView, name='blog')
+    path('', home.views.home, name='home'),
+    path('blog/', include('blog.urls'), name='blog'),
+    path('sign/', include('regUser.urls')),
+
 ]
+<<<<<<< HEAD
 urlpatterns+= static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns+= static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+=======
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+>>>>>>> aa63bd7a62534e62ac69d41229e1af6264db648c

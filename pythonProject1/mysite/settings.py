@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-i)52!$ls$s6siuhv*1^cc31&7d7qgnygli2=ctu91*16w@1r0('
+SECRET_KEY = 'django-insecure-wu6m!5@b+gb8ie$rhwap0+0s*978$4had4sl8wmp))0i6%s8)n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'portfolio',
+    'home',
+    'regUser',
 
 ]
 
@@ -105,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-Ru'
 
 TIME_ZONE = 'UTC'
 
@@ -118,12 +121,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+<<<<<<< HEAD
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     BASE_DIR /'static',
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+=======
+MEDIA_URL = 'media/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+>>>>>>> aa63bd7a62534e62ac69d41229e1af6264db648c
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

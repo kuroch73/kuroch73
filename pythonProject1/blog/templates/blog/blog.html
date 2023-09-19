@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Блог</title>
     <link rel="stylesheet" href="={% static 'home/style/style.css' %}">
 </head>
+
 <body>
 <header class ="header">
 <nav>
@@ -26,10 +28,36 @@
         <span class="my_age">99 </span>
     </section>
 
+<<<<<<< HEAD
     <section class="hero">
         <h2>регистрация нового пользователя </h2>
         <a href="#" class ="sign_link"> Регистрация </a>
     </section>
 </main>
+=======
+    <link rel="stylesheet" href="{% static 'blog/style/style.css' %}">
+
+    <header></header>
+    <main>
+        <div class="wrapper">
+            <h1 class="title title--h1">Блог</h1>
+
+
+            {% for article in articles %}
+            <div class="card">
+                <div class="col-l">
+                    <img class="card_img" src="{{ article.image.url }}" alt="">
+                </div>
+                <div class="col-r">
+                    <a class="title card_title" ref="{% url 'detail' article.id %}">{{ article.title }}</a>
+                    <p class="card_date">{{ article.date }}</p>
+                    <p class="card_desc">{{ article.desc|truncatechars:250 }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+>>>>>>> aa63bd7a62534e62ac69d41229e1af6264db648c
 </body>
+
 </html>
